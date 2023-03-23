@@ -43,6 +43,7 @@
         <vavr.version>0.10.4</vavr.version>
         <mockito.version>4.9.0</mockito.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
+        <openai-chatgpt3-lib>0.11.1</openai-chatgpt3-lib>
 
         <google-cloud-compute.version>1.7.2</google-cloud-compute.version>
         <google-cloud-pubsub.version>1.120.11</google-cloud-pubsub.version>
@@ -89,6 +90,13 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- chatGPT-->
+        <dependency>
+            <groupId>com.theokanning.openai-gpt3-java</groupId>
+            <artifactId>service</artifactId>
+            <version>${openai-chatgpt3-lib}</version>
         </dependency>
 
         <dependency>
