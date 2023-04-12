@@ -14,6 +14,9 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yml
+    enabled: false # disable this to start project without DB access
 
 openai:
   apiKey:

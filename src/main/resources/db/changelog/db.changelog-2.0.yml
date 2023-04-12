@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: your-name
+      changes:
+        - createTable:
+            tableName: example_table_2
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+      rollback:
+        - dropTable:
+            tableName: example_table_2
