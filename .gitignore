@@ -30,6 +30,7 @@ target/
 
 # IDE / Editor
 .idea
+.vscode
 # Local History for Visual Studio Code
 .history/
 
