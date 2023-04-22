@@ -11,13 +11,17 @@
 
     <groupId>com.feiwanghub</groupId>
     <artifactId>gcp-playground</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>gcp-playground</name>
     <url>http://maven.apache.org</url>
     <scm>
         <url>https://github.com/FeiWangHub/gcp-playground</url>
     </scm>
+
+    <modules>
+        <module>sub-dataflow-beam</module>
+    </modules>
 
     <properties>
         <java.version>17</java.version>
