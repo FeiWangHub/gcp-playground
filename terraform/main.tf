@@ -4,18 +4,18 @@ provider "google" {
   zone    = "asia-east1-b"
 }
 
-resource "google_storage_bucket" "feiwanghub-gcp-test" {
-  name     = "feiwanghub-gcp-test-bucket"
+resource "google_storage_bucket" "gcp-playground-bucket" {
+  name     = "gcp-playground-bucket"
   location = "asia-east1"
 }
 
 resource "google_storage_bucket_object" "test-main-tf" {
   name   = "test-main.tf"
   source = "main.tf"
-  bucket = google_storage_bucket.feiwanghub-gcp-test.name
-  lifecycle {
-    prevent_destroy = true
-  }
+  bucket = google_storage_bucket.gcp-playground-bucket.name
+#  lifecycle {
+#    prevent_destroy = true
+#  }
 }
 
 #resource "google_compute_network" "vpc_network" {
