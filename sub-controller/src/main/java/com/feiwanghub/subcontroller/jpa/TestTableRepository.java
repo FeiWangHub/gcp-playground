@@ -1,4 +1,4 @@
-package com.feiwanghub.jpa;
+package com.feiwanghub.subcontroller.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

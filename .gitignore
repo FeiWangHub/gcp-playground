@@ -1,5 +1,6 @@
-# Compiled class file
+# Java
 *.class
+application-local.yml
 
 ### Maven ###
 target/

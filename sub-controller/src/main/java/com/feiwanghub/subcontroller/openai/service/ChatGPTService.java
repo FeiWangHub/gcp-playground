@@ -1,4 +1,4 @@
-package com.feiwanghub.openai.service;
+package com.feiwanghub.subcontroller.openai.service;
 
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.completion.CompletionResult;

@@ -1,6 +1,6 @@
-package com.feiwanghub.openai.controller;
+package com.feiwanghub.subcontroller.openai.controller;
 
-import com.feiwanghub.openai.service.ChatGPTService;
+import com.feiwanghub.subcontroller.openai.service.ChatGPTService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

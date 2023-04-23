@@ -1,4 +1,4 @@
-package com.feiwanghub.liquibase;
+package com.feiwanghub.subcontroller.liquibase;
 
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.beans.factory.annotation.Value;

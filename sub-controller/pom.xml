@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<groupId>org.springframework.boot</groupId>
+		<version>2.5.14</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>com.feiwanghub</groupId>
+	<artifactId>sub-controller</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>sub-controller</name>
+	<description>sub-controller</description>
+
+	<properties>
+		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+
+		<!-- using -->
+		<lombok.version>1.18.22</lombok.version>
+		<okhttp3.version>4.9.1</okhttp3.version>
+		<guava.version>31.0.1-jre</guava.version>
+		<junit.version>3.8.1</junit.version>
+
+		<!-- unused -->
+		<swagger-annotations.version>1.5.20</swagger-annotations.version>
+		<spring-cloud-gcp-dependencies.version>3.4.0</spring-cloud-gcp-dependencies.version>
+		<spring-cloud-starter-openfeign.version>3.0.5</spring-cloud-starter-openfeign.version>
+		<postgresql.version>42.3.3</postgresql.version>
+		<liquibase.version>4.8.0</liquibase.version>
+		<beam.version>2.43.0</beam.version>
+		<vavr.version>0.10.4</vavr.version>
+		<mockito.version>4.9.0</mockito.version>
+		<commons-lang3.version>3.12.0</commons-lang3.version>
+		<openai-chatgpt3-lib>0.11.1</openai-chatgpt3-lib>
+
+		<google-cloud-compute.version>1.7.2</google-cloud-compute.version>
+		<google-cloud-pubsub.version>1.120.11</google-cloud-pubsub.version>
+		<google-cloud-dataflow-client.version>0.9.0</google-cloud-dataflow-client.version>
+
+		<!--        <spring-kafka.version>2.7.14</spring-kafka.version>-->
+		<!--        <kafka.version>2.8.1</kafka.version>-->
+		<!--        <kafka.junit.version>4.2.3</kafka.junit.version>-->
+
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Database-->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>${liquibase.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>${okhttp3.version}</version>
+		</dependency>
+
+		<!--        <dependency>-->
+		<!--            <groupId>io.vavr</groupId>-->
+		<!--            <artifactId>vavr</artifactId>-->
+		<!--            <version>${vavr.version}</version>-->
+		<!--        </dependency>-->
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- chatGPT-->
+		<dependency>
+			<groupId>com.theokanning.openai-gpt3-java</groupId>
+			<artifactId>service</artifactId>
+			<version>${openai-chatgpt3-lib}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,4 +1,4 @@
-package com.feiwanghub.openai.model;
+package com.feiwanghub.subcontroller.openai.model;
 
 import java.util.Date;
 import java.util.List;
