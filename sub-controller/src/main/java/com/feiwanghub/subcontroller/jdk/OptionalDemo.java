@@ -1,4 +1,4 @@
-package com.feiwanghub.subcontroller.utils;
+package com.feiwanghub.subcontroller.jdk;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,20 +32,15 @@ public class OptionalDemo {
      * 1. create optional obj
      */
     public void createOptional() {
-        // 1.1 create empty optional
-        Optional<Address> optAddress = Optional.empty();
-
-        // 1.2 create optional with non-null value
-        Optional<Address> optAddress2 = Optional.of(new Address());
-
-        // 1.3 create optional with nullable value
-        Optional<Address> optAddress3 = Optional.ofNullable(new Address());
+        Optional<Address> optAddress = Optional.empty();// 1.1 create empty optional
+        Optional<Address> optAddress2 = Optional.of(new Address());// 1.2 create optional with non-null value
+        Optional<Address> optAddress3 = Optional.ofNullable(new Address());// 1.3 create optional with nullable value
     }
 
     /**
-     * 3. judge if the optional obj is present, by isPresent | ifPresent | ifPresentOrElse
+     * 2. judge if the optional obj is present, by isPresent | ifPresent | ifPresentOrElse
      */
-    public void isPresent() {
+    public void checkIfPresent() {
         Optional<Address> notNullOptional = Optional.of(new Address("GuangZhou", "CHINA"));
         System.out.println(notNullOptional.isPresent());//true
         notNullOptional.ifPresent(address -> System.out.println(address.getCity()));//will print
@@ -135,6 +130,7 @@ public class OptionalDemo {
 
     public static void main(String[] args) {
         OptionalDemo demo = new OptionalDemo();
+        // demo.checkIfPresent();
         // demo.getValueOrDefaultValue();
         // demo.filterValue();
         demo.convertValue();
