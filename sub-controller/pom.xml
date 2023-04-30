@@ -3,13 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<groupId>org.springframework.boot</groupId>
-		<version>2.5.14</version>
-		<relativePath/>
+		<groupId>com.feiwanghub</groupId>
+		<version>1.0-SNAPSHOT</version>
+		<artifactId>gcp-playground</artifactId>
 	</parent>
 
-	<groupId>com.feiwanghub</groupId>
 	<artifactId>sub-controller</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
@@ -41,14 +39,6 @@
 		<mockito.version>4.9.0</mockito.version>
 		<commons-lang3.version>3.12.0</commons-lang3.version>
 		<openai-chatgpt3-lib>0.11.1</openai-chatgpt3-lib>
-
-		<google-cloud-compute.version>1.7.2</google-cloud-compute.version>
-		<google-cloud-pubsub.version>1.120.11</google-cloud-pubsub.version>
-		<google-cloud-dataflow-client.version>0.9.0</google-cloud-dataflow-client.version>
-
-		<!--        <spring-kafka.version>2.7.14</spring-kafka.version>-->
-		<!--        <kafka.version>2.8.1</kafka.version>-->
-		<!--        <kafka.junit.version>4.2.3</kafka.junit.version>-->
 
 	</properties>
 

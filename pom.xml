@@ -19,8 +19,8 @@
     </scm>
 
     <modules>
-        <module>sub-dataflow-beam</module>
         <module>sub-controller</module>
+        <module>sub-dataflow-beam</module>
     </modules>
 
     <properties>
@@ -30,16 +30,27 @@
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+
+        <!-- Util -->
+        <jackson.version>2.13.0</jackson.version>
+        <guava.version>31.0.1-jre</guava.version>
+
+        <!-- Google Cloud Service -->
+        <google-cloud-storage.version>2.1.0</google-cloud-storage.version>
+        <google-cloud-bigquery.version>v2-rev20211129-1.32.1</google-cloud-bigquery.version>
+        <google-cloud-compute.version>1.7.2</google-cloud-compute.version>
+        <google-cloud-pubsub.version>1.120.11</google-cloud-pubsub.version>
+        <google-cloud-dataflow-client.version>0.9.0</google-cloud-dataflow-client.version>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
     <distributionManagement>
         <repository>
