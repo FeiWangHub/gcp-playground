@@ -2,6 +2,8 @@ package com.feiwanghub.subcontroller.jdk;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static java.lang.System.out;
@@ -74,11 +76,53 @@ public class StreamAPIDemoTODO {
         //groupingBy
     }
 
+    void testFlatMap() {
+        //flatMap sentence to distinct words
+        var lines = Arrays.asList("Hello world", "Java Stream API", "Java 17");
+        var uniqueWords = lines.stream()
+                .flatMap(line -> Arrays.stream(line.split(" "))) //split line into words stream
+                .distinct()
+                .toList();
+        uniqueWords.forEach(out::println);
+
+        //flatMap nested list
+        out.println();
+        List<List<Integer>> nestedList = Arrays.asList(
+                Arrays.asList(1, 2, 3),
+                Arrays.asList(4, 5, 6),
+                Arrays.asList(7, 8, 9)
+        );
+
+        List<Integer> flattenedList = nestedList.stream()
+                .flatMap(List::stream)
+                .toList();
+        flattenedList.forEach(System.out::println);
+    }
+
+    void testGroupingBy(){
+        //groupingBy words by length
+        var lines = Arrays.asList("Hello world", "Java Stream API", "Java 17");
+        var words = lines.stream()
+                .flatMap(line -> Arrays.stream(line.split(" "))) //split line into words stream
+                .distinct()
+                .collect(Collectors.groupingBy(String::length));
+        words.forEach((k,v)->out.println(k+"->"+v));
+
+        //groupingBy word and its count
+        out.println();
+        List<String> words2 = Arrays.asList("apple", "banana", "apple", "cherry", "banana", "apple");
+        Map<String, Long> wordCounts = words2.stream()
+                .collect(Collectors.groupingBy(word -> word, Collectors.counting()));
+        wordCounts.forEach((word, count) -> System.out.println(word + ": " + count));
+    }
+
     public static void main(String[] args) {
         StreamAPIDemoTODO demo = new StreamAPIDemoTODO();
         //demo.parallelStream();
         //demo.onClose();
-        demo.usefulAPI();
+        //demo.usefulAPI();
+        //demo.testGroupingBy();
+        demo.testFlatMap();
     }
 
 }
