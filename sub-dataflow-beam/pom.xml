@@ -228,6 +228,12 @@
       <dependencies>
         <dependency>
           <groupId>org.apache.beam</groupId>
+          <artifactId>beam-sdks-java-io-jdbc</artifactId>
+          <version>${beam.version}</version>
+        </dependency>
+
+        <dependency>
+          <groupId>org.apache.beam</groupId>
           <artifactId>beam-runners-spark</artifactId>
           <version>${beam.version}</version>
           <scope>runtime</scope>
