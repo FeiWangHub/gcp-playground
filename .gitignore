@@ -23,6 +23,9 @@ target/
 *.tar.gz
 *.rar
 
+# Terraform
+.terraform/
+
 # macOS
 .DS_Store
 

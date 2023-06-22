@@ -4,33 +4,41 @@ provider "google" {
   zone    = "asia-east1-b"
 }
 
-resource "google_storage_bucket" "gcp-playground-bucket" {
-  name     = "gcp-playground-bucket"
-  location = "asia-east1"
-}
-
-resource "google_storage_bucket_object" "test-main-tf" {
-  name   = "test-main.tf"
-  source = "../LICENSE"
-  bucket = google_storage_bucket.gcp-playground-bucket.name
-#  lifecycle {
-#    prevent_destroy = true
-#  }
-}
-
-resource "google_storage_bucket" "gcp-playground-lifecycle-test" {
-  name     = "gcp-playground-lifecycle-test"
-  location = "asia-east1"
-
-  lifecycle_rule {
-    action {
-      type = "Delete"
-    }
-    condition {
-      age = 36500
-    }
+terraform {
+  backend "gcs" {
+    bucket  = "gcp-playground-terraform"
+    prefix  = "terraform/state"
   }
 }
+
+resource "google_storage_bucket" "gcp-playground-terraform" {
+  name     = "gcp-playground-terraform"
+  location = "asia-east1"
+}
+
+#resource "google_storage_bucket_object" "test-main-tf" {
+#  name   = "test-main.tf"
+#  source = "../LICENSE"
+#  bucket = google_storage_bucket.gcp-playground-terraform.name
+##  lifecycle {
+##    prevent_destroy = true
+##  }
+#}
+
+#resource "google_storage_bucket" "gcp-playground-lifecycle-test" {
+#  name     = "gcp-playground-lifecycle-test"
+#  location = "asia-east1"
+#  force_destroy = true
+#
+#  lifecycle_rule {
+#    action {
+#      type = "Delete"
+#    }
+#    condition {
+#      age = 36500
+#    }
+#  }
+#}
 
 #resource "google_compute_network" "vpc_network" {
 #  name                    = "terraform-network"
