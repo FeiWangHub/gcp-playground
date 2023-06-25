@@ -1,6 +1,6 @@
 provider "google" {
   project = "115175339802"
-  region  = "asia-east1"
+  region  = var.regionTW
   zone    = "asia-east1-b"
 }
 
@@ -13,7 +13,7 @@ terraform {
 
 resource "google_storage_bucket" "gcp-playground-terraform" {
   name     = "gcp-playground-terraform"
-  location = "asia-east1"
+  location = var.regionTW
 }
 
 #resource "google_storage_bucket_object" "test-main-tf" {
