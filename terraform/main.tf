@@ -6,8 +6,8 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket  = "gcp-playground-terraform"
-    prefix  = "terraform/state"
+    bucket = "gcp-playground-terraform"
+    prefix = "terraform/state"
   }
 }
 
@@ -66,3 +66,6 @@ resource "google_storage_bucket" "gcp-playground-terraform" {
 #  }
 #}
 
+data "google_secret_manager_secret" "pg_user" {
+  secret_id = "ElephantSQL-PG-USER"
+}

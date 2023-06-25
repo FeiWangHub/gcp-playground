@@ -14,6 +14,10 @@ output "terraformBucketStorageLocation" {
   value = google_storage_bucket.gcp-playground-terraform.location
 }
 
-output "Env_JAVA_HOME" {
+output "ENV_JAVA_HOME" {
   value = var.JAVA_HOME
+}
+
+output "GCP_KMS_PG_USER" {
+  value = data.google_secret_manager_secret.pg_user.secret_id
 }
