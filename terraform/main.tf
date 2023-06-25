@@ -1,5 +1,5 @@
 provider "google" {
-  project = "115175339802"
+  project = var.GCP_PROJECT
   region  = var.regionTW
   zone    = "asia-east1-b"
 }
@@ -9,6 +9,13 @@ terraform {
     bucket = "gcp-playground-terraform"
     prefix = "terraform/state"
   }
+}
+
+module "kms-module" {
+  source = "./kms-module"
+}
+output "kms-PG-USER" {
+  value = module.kms-module.GCP_KMS_PG_USER
 }
 
 resource "google_storage_bucket" "gcp-playground-terraform" {
@@ -65,7 +72,3 @@ resource "google_storage_bucket" "gcp-playground-terraform" {
 #    }
 #  }
 #}
-
-data "google_secret_manager_secret" "pg_user" {
-  secret_id = "ElephantSQL-PG-USER"
-}
