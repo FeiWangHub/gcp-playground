@@ -13,3 +13,7 @@ output "terraformBucketStorageClass" {
 output "terraformBucketStorageLocation" {
   value = google_storage_bucket.gcp-playground-terraform.location
 }
+
+output "Env_JAVA_HOME" {
+  value = var.JAVA_HOME
+}
