@@ -4,6 +4,14 @@ import java.util.stream.Stream;
 
 /**
  * '@FunctionalInterface' 帮助检查接口是否符合lambda接口定义，标注的接口只能有一个抽象方法
+ * 一些JDK提供的函数式接口：
+ * java.util.function.Consumer<T>： 接受一个输入参数T，没有返回值。用于执行某些操作，如打印、写入等。
+ * java.util.function.Supplier<T>： 不接受任何参数，返回一个结果类型T。用于生成数据或对象。
+ * java.util.function.Function<T, R>： 接受一个输入参数T，返回一个结果类型R。用于对输入数据进行处理和转换。
+ * java.util.function.Predicate<T>： 接受一个输入参数T，返回一个布尔值。用于对输入数据进行条件判断。
+ * java.util.function.BiFunction<T, U, R>： 接受两个输入参数T和U，返回一个结果类型R。用于对两个输入数据进行处理和转换。
+ * java.util.function.BinaryOperator<T>： 接受两个相同类型的输入参数T，返回一个相同类型的结果T。用于执行二元操作。
+ * java.util.function.UnaryOperator<T>： 接受一个输入参数T，返回一个相同类型的结果T。用于执行一元操作。
  */
 public class FunctionalInterfaceDemo {
 
