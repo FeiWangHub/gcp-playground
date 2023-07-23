@@ -12,10 +12,17 @@ terraform {
 }
 
 module "kms-module" {
-  source = "./kms-module"
+  source = "./modules/kms"
 }
 output "kms-PG-USER" {
   value = module.kms-module.GCP_KMS_PG_USER
+}
+
+module "svc-accounts" {
+  source = "./modules/svc_accounts"
+}
+output "svc_accounts_all_ids" {
+  value = module.svc-accounts.svc_accounts_all_ids
 }
 
 resource "google_storage_bucket" "gcp-playground-terraform" {
