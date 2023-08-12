@@ -26,7 +26,7 @@
 		<lombok.version>1.18.22</lombok.version>
 		<okhttp3.version>4.9.1</okhttp3.version>
 		<guava.version>31.0.1-jre</guava.version>
-		<junit.version>3.8.1</junit.version>
+		<!-- <junit.version>3.8.1</junit.version>-->
 
 		<!-- unused -->
 		<swagger-annotations.version>1.5.20</swagger-annotations.version>
@@ -103,10 +103,16 @@
 			<version>${openai-chatgpt3-lib}</version>
 		</dependency>
 
+		<!-- Unit Test-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
