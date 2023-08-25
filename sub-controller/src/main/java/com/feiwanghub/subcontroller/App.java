@@ -12,7 +12,6 @@ public class App {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext appContext = SpringApplication.run(App.class, args);
-
         //appContext.getBean(AopDemo.class).testEntryPoint();
     }
 }

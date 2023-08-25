@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.feiwanghub</groupId>
+        <artifactId>gcp-playground</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <name>sub-dataflow-new</name>
+    <artifactId>sub-dataflow-new</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <description>sub-dataflow-new</description>
+
+    <properties>
+        <apache.beam.version>2.49.0</apache.beam.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.beam</groupId>
+            <artifactId>beam-sdks-java-core</artifactId>
+            <version>${apache.beam.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.beam</groupId>
+            <artifactId>beam-runners-google-cloud-dataflow-java</artifactId>
+            <version>${apache.beam.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.beam</groupId>
+            <artifactId>beam-runners-direct-java</artifactId>
+            <version>${apache.beam.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.beam</groupId>
+            <artifactId>beam-sdks-java-io-google-cloud-platform</artifactId>
+            <version>${apache.beam.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

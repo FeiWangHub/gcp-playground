@@ -5,7 +5,6 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
         <version>2.5.14</version>
-        <relativePath/>
     </parent>
 
     <groupId>com.feiwanghub</groupId>
@@ -21,6 +20,7 @@
     <modules>
         <module>sub-controller</module>
         <module>sub-dataflow-beam</module>
+        <module>sub-dataflow-new</module>
     </modules>
 
     <properties>
@@ -43,14 +43,23 @@
         <google-cloud-dataflow-client.version>0.9.0</google-cloud-dataflow-client.version>
     </properties>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
     <distributionManagement>
         <repository>
