@@ -1,0 +1,15 @@
+{
+    "type": "record",
+    "name": "GraphRecord",
+    "namespace": "com.simplegraph",
+    "fields": [
+        {
+            "name": "id",
+            "type": "int"
+        },
+        {
+            "name": "rec",
+            "type": "int"
+        }
+    ]
+}

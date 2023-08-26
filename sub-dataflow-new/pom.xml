@@ -15,6 +15,7 @@
 
     <properties>
         <apache.beam.version>2.49.0</apache.beam.version>
+        <avro.version>1.8.2</avro.version>
     </properties>
 
     <dependencies>
@@ -42,11 +43,24 @@
             <version>${apache.beam.version}</version>
         </dependency>
 
+        <!-- Avro Serialization for graph computation -->
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>${avro.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro-maven-plugin</artifactId>
+            <version>${avro.version}</version>
+        </dependency>
+
         <!-- logging SLF4J simple binding -->
-<!--        <dependency>-->
-<!--            <groupId>org.slf4j</groupId>-->
-<!--            <artifactId>slf4j-simple</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.slf4j</groupId>-->
+        <!--            <artifactId>slf4j-simple</artifactId>-->
+        <!--        </dependency>-->
 
         <!-- logging SLF4J simple binding - Option 2 -->
         <dependency>
@@ -54,7 +68,18 @@
             <artifactId>slf4j-maven-plugin-log</artifactId>
             <version>1.0.0</version>
         </dependency>
-
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.feiwanghub.subdataflownew.wordcount.WordCount</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -67,6 +67,7 @@ public class WordCount {
     }
 
     public static void main(String[] args) {
+        //TODO test add arguments
         WordCount wordCount = new WordCount();
         wordCount.runPipeline(args);
     }
