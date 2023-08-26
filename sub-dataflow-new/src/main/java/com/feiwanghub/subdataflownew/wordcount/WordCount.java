@@ -1,5 +1,6 @@
 package com.feiwanghub.subdataflownew.wordcount;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.io.TextIO;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
@@ -12,6 +13,7 @@ import org.apache.beam.sdk.values.PCollection;
 
 import java.util.List;
 
+@Slf4j
 public class WordCount {
 
     private void runPipeline(String[] args) {
@@ -39,7 +41,7 @@ public class WordCount {
          */
         PCollection<KV<String, Long>> wordCountKV = wordLists.apply(Flatten.iterables()).apply(Count.perElement());
         PCollection<String> resultStrPool = wordCountKV.apply(ParDo.of(new FormatKVAsTextFn()));
-        resultStrPool.apply(ParDo.of(new PrintStringFn()));
+//        resultStrPool.apply(ParDo.of(new PrintStringFn()));
 
         /**
          * Output to gcp bucket TODO

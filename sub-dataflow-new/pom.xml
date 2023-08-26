@@ -41,6 +41,20 @@
             <artifactId>beam-sdks-java-io-google-cloud-platform</artifactId>
             <version>${apache.beam.version}</version>
         </dependency>
+
+        <!-- logging SLF4J simple binding -->
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-simple</artifactId>-->
+<!--        </dependency>-->
+
+        <!-- logging SLF4J simple binding - Option 2 -->
+        <dependency>
+            <groupId>com.googlecode.slf4j-maven-plugin-log</groupId>
+            <artifactId>slf4j-maven-plugin-log</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

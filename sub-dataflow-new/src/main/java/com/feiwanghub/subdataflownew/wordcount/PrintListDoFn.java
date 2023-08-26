@@ -14,7 +14,7 @@ public class PrintListDoFn extends DoFn<List<String>, Void> {
 
     @ProcessElement
     public void processElement(ProcessContext c) {
-//        System.out.println(c.element());
+        //System.out.println(c.element());
         LOGGER.info("words: {}", c.element());
     }
 
