@@ -1,4 +1,4 @@
-package com.feiwanghub.subdataflownew.graphcomputation;
+package com.feiwanghub.subdataflownew.GraphComputation;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.beam.sdk.transforms.DoFn;
@@ -7,6 +7,9 @@ import org.apache.beam.sdk.values.PCollectionView;
 
 import java.util.Map;
 
+/**
+ * C = (A + 1) * B
+ */
 @RequiredArgsConstructor
 public class CRecordCreateFn extends DoFn<KV<Integer, GraphRecord>, KV<Integer, GraphRecord>> {
 

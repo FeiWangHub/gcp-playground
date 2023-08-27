@@ -1,4 +1,4 @@
-package com.feiwanghub.subdataflownew.wordcount;
+package com.feiwanghub.subdataflownew.WordCount;
 
 import org.apache.beam.sdk.transforms.DoFn;
 

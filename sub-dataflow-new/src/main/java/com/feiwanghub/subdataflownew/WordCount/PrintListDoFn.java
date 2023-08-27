@@ -1,4 +1,4 @@
-package com.feiwanghub.subdataflownew.wordcount;
+package com.feiwanghub.subdataflownew.WordCount;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.beam.sdk.transforms.DoFn;

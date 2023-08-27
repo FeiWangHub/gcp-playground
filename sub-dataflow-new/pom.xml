@@ -76,7 +76,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.feiwanghub.subdataflownew.wordcount.WordCount</mainClass>
+                    <mainClass>com.feiwanghub.subdataflownew.WordCount.WordCount</mainClass>
                 </configuration>
             </plugin>
         </plugins>

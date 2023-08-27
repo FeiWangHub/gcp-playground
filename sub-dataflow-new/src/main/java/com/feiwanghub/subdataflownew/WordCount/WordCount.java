@@ -1,4 +1,4 @@
-package com.feiwanghub.subdataflownew.wordcount;
+package com.feiwanghub.subdataflownew.WordCount;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.beam.sdk.Pipeline;
@@ -7,12 +7,8 @@ import org.apache.beam.sdk.options.PipelineOptionsFactory;
 import org.apache.beam.sdk.transforms.*;
 import org.apache.beam.sdk.values.KV;
 import org.apache.beam.sdk.values.PCollection;
-import org.apache.beam.sdk.values.TypeDescriptors;
 
-import java.util.Arrays;
 import java.util.List;
-
-import static com.feiwanghub.subdataflownew.wordcount.ExtractWordListFn.TOKENIZER_PATTERN;
 
 /**
  * Official Word Count Code

@@ -1,4 +1,4 @@
-package com.feiwanghub.subdataflownew.graphcomputation;
+package com.feiwanghub.subdataflownew.GraphComputation;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.beam.sdk.Pipeline;

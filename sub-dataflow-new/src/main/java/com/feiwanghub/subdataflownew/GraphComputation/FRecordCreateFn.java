@@ -1,4 +1,4 @@
-package com.feiwanghub.subdataflownew.graphcomputation;
+package com.feiwanghub.subdataflownew.GraphComputation;
 
 import org.apache.beam.sdk.transforms.DoFn;
 import org.apache.beam.sdk.transforms.join.CoGbkResult;
