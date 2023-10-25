@@ -12,9 +12,9 @@ public class FRecordCreateFn extends DoFn<KV<Integer, CoGbkResult>, KV<Integer, 
     @ProcessElement
     public void processElement(ProcessContext c) {
         KV<Integer, CoGbkResult> aceRec = c.element();
-        GraphRecord aRec = aceRec.getValue().getOnly(SimpleGraph.aRecTag);
-        GraphRecord cRec = aceRec.getValue().getOnly(SimpleGraph.cRecTag);
-        GraphRecord dRec = aceRec.getValue().getOnly(SimpleGraph.eRecTag);
+        GraphRecord aRec = aceRec.getValue().getOnly(MainSimpleGraph.aRecTag);
+        GraphRecord cRec = aceRec.getValue().getOnly(MainSimpleGraph.cRecTag);
+        GraphRecord dRec = aceRec.getValue().getOnly(MainSimpleGraph.eRecTag);
         int fval = 5 * aRec.getRec() + 2 * cRec.getRec() + 10 * dRec.getRec();
         c.output(KV.of(aceRec.getKey(), new GraphRecord(aceRec.getKey(), fval)));
     }

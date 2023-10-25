@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 @Slf4j
-public class SimpleGraph {
+public class MainSimpleGraph {
 
     public static final TupleTag<GraphRecord> aRecTag = new TupleTag<>();
     public static final TupleTag<GraphRecord> cRecTag = new TupleTag<>();
@@ -111,8 +111,8 @@ public class SimpleGraph {
     }
 
     public static void main(String[] args) {
-        SimpleGraph simpleGraph = new SimpleGraph();
-        simpleGraph.runPipeline(args);
+        MainSimpleGraph mainSimpleGraph = new MainSimpleGraph();
+        mainSimpleGraph.runPipeline(args);
     }
 
     public interface SimpleGraphOptions extends PipelineOptions {

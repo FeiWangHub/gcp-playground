@@ -16,9 +16,9 @@ public class ERecordCreateFn extends DoFn<KV<Integer, CoGbkResult>, KV<Integer, 
          * NOTE: In this mode, the relationship is a one-to-one between the records, hence "getOnly"
          * If the relationship were one-to-many (as in tutorial 3) - it would be "getAll" which would return an Iterable
          */
-        GraphRecord aRec = acdRec.getValue().getOnly(SimpleGraph.aRecTag);
-        GraphRecord cRec = acdRec.getValue().getOnly(SimpleGraph.cRecTag);
-        GraphRecord dRec = acdRec.getValue().getOnly(SimpleGraph.dRecTag);
+        GraphRecord aRec = acdRec.getValue().getOnly(MainSimpleGraph.aRecTag);
+        GraphRecord cRec = acdRec.getValue().getOnly(MainSimpleGraph.cRecTag);
+        GraphRecord dRec = acdRec.getValue().getOnly(MainSimpleGraph.dRecTag);
         int eval = cRec.getRec() * cRec.getRec() + 2 * aRec.getRec() * dRec.getRec();
         c.output(KV.of(acdRec.getKey(), new GraphRecord(acdRec.getKey(), eval)));
     }

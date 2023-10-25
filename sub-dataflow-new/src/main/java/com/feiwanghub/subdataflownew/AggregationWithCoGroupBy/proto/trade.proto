@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_package = "com.feiwanghub.subdataflownew.AggregationWithCoGroupBy.proto";
+option java_outer_classname = "TradeProto";
+
+message Trade {
+  string tradeId = 1;
+  string ccy = 2;
+  string counterparty = 3;
+}

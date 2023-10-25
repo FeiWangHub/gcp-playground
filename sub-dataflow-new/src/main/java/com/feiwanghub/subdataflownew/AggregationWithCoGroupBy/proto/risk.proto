@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "com.feiwanghub.subdataflownew.AggregationWithCoGroupBy.proto";
+option java_outer_classname = "RiskProto";
+
+message Risk {
+  string riskId = 1;
+  string tradeId = 2;
+  string marketId = 3;
+  double value = 4;
+}

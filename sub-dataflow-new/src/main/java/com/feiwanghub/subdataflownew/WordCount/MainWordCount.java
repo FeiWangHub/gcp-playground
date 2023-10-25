@@ -15,7 +15,7 @@ import java.util.List;
  * <a href="https://github.com/apache/beam/blob/master/examples/java/src/main/java/org/apache/beam/examples/WordCount.java">Official Word Count Code</a>
  */
 @Slf4j
-public class WordCount {
+public class MainWordCount {
 
     private void runPipeline(String[] args) {
         PipelineOptionsFactory.register(WordCountOptions.class);
@@ -64,8 +64,8 @@ public class WordCount {
 
     public static void main(String[] args) {
         //TODO test add arguments
-        WordCount wordCount = new WordCount();
-        wordCount.runPipeline(args);
+        MainWordCount mainWordCount = new MainWordCount();
+        mainWordCount.runPipeline(args);
     }
 
 }
