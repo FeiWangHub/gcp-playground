@@ -16,6 +16,9 @@
     <properties>
         <apache.beam.version>2.49.0</apache.beam.version>
         <avro.version>1.8.2</avro.version>
+        <protobuf.version>3.19.4</protobuf.version>
+        <kr.version>1.6.2</kr.version>
+        <xolstice.version>0.6.1</xolstice.version>
     </properties>
 
     <dependencies>
@@ -56,6 +59,13 @@
             <version>${avro.version}</version>
         </dependency>
 
+        <!-- ProtoBuf for AggregationWithCoGroupBy -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
+
         <!-- logging SLF4J simple binding -->
         <!--        <dependency>-->
         <!--            <groupId>org.slf4j</groupId>-->
@@ -76,10 +86,39 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.feiwanghub.subdataflownew.WordCount.WordCount</mainClass>
+                    <mainClass>com.feiwanghub.subdataflownew.WordCount.MainWordCount</mainClass>
                 </configuration>
             </plugin>
+
+            <!-- TODO plugins for AggregationWithCoGroupBy -->
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>${xolstice.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}</protocArtifact>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
+
+        <!-- TODO Extension for AggregationWithCoGroupBy -->
+        <extensions>
+            <extension>
+                <!-- provides os.detected.classifier (i.e. linux-x86_64, osx-x86_64) property -->
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>${kr.version}</version>
+            </extension>
+        </extensions>
+
     </build>
 
 </project>
