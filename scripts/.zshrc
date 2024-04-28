@@ -12,6 +12,7 @@ function sysinfo() {
 #Chinese Terminal
 export LANG=en_US.UTF-8
 
+# mac
 function gitpullall() {
   original_dir=$(pwd)
   subdirs=$(find . -mindepth 1 -maxdepth 1 -type d -print0)
@@ -27,4 +28,22 @@ function gitpullall() {
       cd "$original_dir" || return
   done <<< "$subdirs"
   cd "$original_dir" || return
+}
+
+# windows git bash
+function gitpullall_gitbash() {
+    original_dir=$(pwd)
+    subdirs=$(ls -d */ 2>/dev/null)
+
+    for dir in $subdirs; do
+        cd "$dir" || continue
+        if [ -d ".git" ]; then
+            echo "Pulling changes in $(pwd)"
+            git pull
+        else
+            echo "Skipping $(pwd): Not a Git repository"
+        fi
+        cd "$original_dir" || return
+    done
+    cd "$original_dir" || return
 }
