@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.feiwanghub
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [app-name, assertj, data, data-jpa, http-client-test, java, java-application, jdbc-hikari, junit, logback, lombok, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, mockito, netty-server, openapi, postgres, properties, readme, serialization-jackson, shade, static-resources, swagger-ui, test-resources]
